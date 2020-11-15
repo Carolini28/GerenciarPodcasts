@@ -6,10 +6,16 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebApi.Domain.Repositories;
+using WebApi.Domain.Services;
+using WebApi.Persistence.Contexts;
+using WebApi.Persistence.Repositories;
+using WebApi.Services;
 
 namespace WebApi {
 	public class Startup {
@@ -24,6 +30,9 @@ namespace WebApi {
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("GerenciarPodcastEntities")));
+			services.AddScoped<IEpisodioRepository, EpisodioRepository>();
+			services.AddScoped<IEpisodioService, EpisodioService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
