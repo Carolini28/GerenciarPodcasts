@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Last Episodes</h1>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+
+    <div class="row view-group">
+        @for (var x = 0; x < 4; x++)
+        {
+            <div class="item col-xs-3 col-lg-3">
+                <div class="thumbnail card">
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Data Structures
+                        </h4>
+                        <p class="group inner list-group-item-text">
+                            Jaqueline cardoso
+                        </p>
+                        <p>Front End Developer Leader</p>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6">
+                                <a href="#" class="btn btn-info btn-lg">
+                                    <span class="glyphicon glyphicon-play"></span> Play
+                                </a>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <img class="group list-group-image img-fluid" src="https://pixabay.com/get/53e7d4454255a914f1dc8460da29317e103bd8ed545074_640.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="text-center" style="margin-top:30px">
+        <a href="#" class="btn btn-info">
+            <span class=""></span> VIEW MORE
+        </a>
+    </div>
+
+</div>
