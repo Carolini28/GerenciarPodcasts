@@ -2,58 +2,405 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Last Episodes</h1>
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-    </ul>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <div class="row view-group">
-        @for (var x = 0; x < 4; x++)
-        {
-            <div class="item col-xs-3 col-lg-3">
-                <div class="thumbnail card">
-                    <div class="caption card-body">
-                        <h4 class="group card-title inner list-group-item-heading">
-                            Data Structures
-                        </h4>
-                        <p class="group inner list-group-item-text">
-                            Jaqueline cardoso
-                        </p>
-                        <p>Front End Developer Leader</p>
+<section class="section-padding-80">
+    <div class="container">
+        <div class="row">
+            <!-- Section Heading -->
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <h2>Last Episodes</h2>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <div class="row">
-                            <div class="col-xs-6 col-md-6">
-                                <a href="#" class="btn btn-info btn-lg">
-                                    <span class="glyphicon glyphicon-play"></span> Play
-                                </a>
-                            </div>
+    <div class="container">
+        <div class="projects-menu mb-30 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item active"> <a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-                            <div class="col-xs-12 col-md-6">
-                                <img class="group list-group-image img-fluid" src="https://pixabay.com/get/53e7d4454255a914f1dc8460da29317e103bd8ed545074_640.png" alt="">
-                            </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-30 blogBox">
+                <div class="show">
+                    <div class="show_content">
+                        <h2>Episode 201 - You Don’t Know Squat!</h2>
+                        <p class="autor">Jaqueline Cardoso</p>
+                        <small>Front-end Dev Leader</small>
+
+                        <div class="player_controls_box">
+
+                            <audio src="https://nerdcast.jovemnerd.com.br/nerdcast_751_rock_nacional.mp3" id="audio"></audio>
+
+                            <a href="#" class="btn btn-info btn-lg" onclick="play()">
+                                <span id="play" class="glyphicon glyphicon-play"></span>
+                            </a>
+
+                            <img src="https://mksdmcdn-9b59.kxcdn.com/megaphone/wp-content/uploads/2019/08/nick-karvounis-QE0BJHGskDo-unsplash-334x251.jpg"
+                                 class="attachment-megaphone-d-episode size-megaphone-d-episode wp-post-image" alt="" loading="lazy">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="load" class="col-12 text-center">
+                <a href="#" class="btn pod-btn mt-70">VIEW MORE</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+
+    function play() {
+        var audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+            $('#play').removeClass('glyphicon-play-circle')
+            $('#play').addClass('glyphicon-pause')
+        } else {
+            audio.pause();
+            audio.currentTime = 0
+            $('#play').addClass('glyphicon-play-circle')
+            $('#play').removeClass('glyphicon-pause')
         }
-    </div>
+    }
 
-    <div class="text-center" style="margin-top:30px">
-        <a href="#" class="btn btn-info">
-            <span class=""></span> VIEW MORE
-        </a>
-    </div>
+    $(document).ready(function () {
+        $(".nav a").on("click", function () {
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    });
 
-</div>
+    $(function () {
+        $(".blogBox").slice(0, 3).show(); 
+        $("#load").click(function (e) { 
+            e.preventDefault();
+            $(".blogBox:hidden").slice(0, 3).show(); 
+            if ($(".blogBox:hidden").length == 0) {
+                $("#load").hide();
+                //alert("No more divs");
+            }
+        });
+    });
+
+</script>
+
+<style>
+    .section-heading h2 {
+        font-size: 44px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+
+    .section-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+    }
+
+    .section-padding-80 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-heading.text-center .line {
+        margin: 0 auto;
+    }
+
+    .section-heading .line {
+        width: 70px;
+        height: 5px;
+        background-color: #007bff94;
+    }
+
+    .projects-menu {
+        position: relative;
+        z-index: 1;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+
+    .projects-menu .nav-item.active::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #007bff94;
+        content: '';
+        z-index: 1;
+    }
+
+    .projects-menu .nav-item.active {
+        color: #232323;
+    }
+
+    .projects-menu .nav-item {
+        font-size: 20px;
+        padding: 0 10px;
+        background-color: transparent;
+        border-radius: 0;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+
+        .projects-menu .nav-item a {
+            color: #a6a6a6;
+        }
+
+        .projects-menu .nav-item.active a {
+            color: #232323;
+        }
+
+    .mt-70 {
+        margin-top: 70px;
+    }
+
+    .pod-btn {
+        position: relative;
+        z-index: 1;
+        min-width: 170px;
+        height: 46px;
+        line-height: 43px;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 0 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #232323;
+        border-radius: 30px;
+        background-color: #ffffff;
+        transition: all 500ms;
+        border: 2px solid #007bff94;
+        letter-spacing: 1px;
+    }
+
+        .pod-btn:hover {
+            box-shadow: none;
+            background-color: #007bff94;
+            color: #ffffff;
+        }
+
+    .show {
+        border-radius: 3px;
+        overflow: hidden;
+        background: #f6f6f6;
+    }
+
+    .show_content h2 {
+        font-size: 20px;
+        font-weight: 400;
+        color: #2e3038;
+        line-height: 1.5;
+    }
+
+    .show_content p {
+        color: #232323;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    .show_content small {
+        font-size: 70%;
+        font-weight: 400;
+        color: #a6a6a6;
+    }
+
+    .show_content {
+        padding-top: 20px;
+        padding-left: 31px;
+        padding-bottom: 22px;
+        padding-right: 30px;
+    }
+
+    .player_controls_box {
+        margin-top: 80px;
+    }
+
+    .jp-play {
+        position: relative;
+        height: 36px;
+        width: 36px;
+        border: none;
+        background: #212529;
+        border-radius: 50%;
+        margin-right: 45px;
+    }
+
+    .jp-play:after {
+        position: absolute;
+        display: block;
+        left: 3px;
+        top: -4px;
+        content: "E";
+        font-family: "ElegantIcons";
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    .player_controls_box img {
+        width: 20%;
+        margin-left: 45px;
+    }
+
+    .player_controls_box .btn-lg {
+        border-radius: 50%;
+        padding: 6px 12px;
+        margin-right: 45px;
+    }
+
+    .player_controls_box .btn-info {
+        background-color: #212529;
+        border-color: #212529;
+    }
+
+    .blogBox {
+        display: none;
+    }
+</style>

@@ -153,3 +153,4 @@ C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApi\obj\Debug\netcoreapp3.1\sta
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApi\obj\Debug\netcoreapp3.1\WebApi.csprojAssemblyReference.cache
