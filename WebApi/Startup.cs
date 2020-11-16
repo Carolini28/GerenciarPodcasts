@@ -35,6 +35,8 @@ namespace WebApi {
 			services.AddScoped<IEpisodioService, EpisodioService>();
 			services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 			services.AddScoped<ICategoriaService, CategoriaService>();
+			services.AddScoped<IAutorRepository, AutorRepository>();
+			services.AddScoped<IAutorService, AutorService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
