@@ -9,9 +9,9 @@ using WebApi.Persistence.Contexts;
 namespace WebApi.Persistence.Repositories {
 	public class EpisodioRepository : BaseRepository, IEpisodioRepository {
 		public EpisodioRepository(AppDbContext context) : base(context) { }
-		public void Add(Episodio item)
+		public async Task Add(Episodio item)
 		{
-			_context.Episodios.Add(item);
+			await _context.Episodios.AddAsync(item);
 		}
 
 		public Episodio Get(int id)

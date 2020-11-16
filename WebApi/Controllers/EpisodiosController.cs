@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Domain.Models;
 using WebApi.Domain.Services;
@@ -31,20 +34,45 @@ namespace WebApi.Controllers {
 
 		// POST api/<EpisodiosController>
 		[HttpPost]
-		public void Post([FromBody] Episodio episodio)
+		[ProducesResponseType(StatusCodes.Status201Created)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+		public async Task<IActionResult> Post(Episodio episodio)
 		{
+			if (!ModelState.IsValid)
+				return BadRequest("Not a valid model");
+
+			await _episodioService.Add(episodio);
+			return CreatedAtAction(nameof(Get), new { id = episodio.Id }, episodio);
 		}
 
 		// PUT api/<EpisodiosController>/5
-		[HttpPut("{id}")]
-		public void Put(int id, [FromBody] string value)
+		[HttpPut]
+		public IActionResult Put([FromBody] Episodio episodio)
 		{
+			if (!ModelState.IsValid)
+				return BadRequest("Not a valid model");
+
+			 _episodioService.Update(episodio);
+
+			return Ok(episodio);
 		}
 
 		// DELETE api/<EpisodiosController>/5
-		[HttpDelete("{id}")]
-		public void Delete(int id)
+		[HttpDelete]
+		public IActionResult Delete([FromBody] Episodio episodio)
 		{
+			if (!ModelState.IsValid)
+				return BadRequest("Not a valid model");
+
+			_episodioService.Remove(episodio);
+
+			return  Ok($"Produto {episodio.Id} foi deletado com sucesso");
+		}
+
+		[HttpGet("Categoria/{id}")]
+		public IEnumerable<Episodio> GetEpisodiosPorCategoria(int id)
+		{
+			return _episodioService.GetAll().Where(x => x.CodigoCategoria == id);
 		}
 	}
 }

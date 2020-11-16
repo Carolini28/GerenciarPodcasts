@@ -14,9 +14,9 @@ namespace WebApi.Services {
 			_episodioRepository = episodioRepository;
 		}
 
-		public void Add(Episodio item)
+		public async Task Add(Episodio item)
 		{
-			_episodioRepository.Add(item);
+			 await _episodioRepository.Add(item);
 		}
 
 		public Episodio Get(int id)
