@@ -33,6 +33,8 @@ namespace WebApi {
 			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("GerenciarPodcastEntities")));
 			services.AddScoped<IEpisodioRepository, EpisodioRepository>();
 			services.AddScoped<IEpisodioService, EpisodioService>();
+			services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+			services.AddScoped<ICategoriaService, CategoriaService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

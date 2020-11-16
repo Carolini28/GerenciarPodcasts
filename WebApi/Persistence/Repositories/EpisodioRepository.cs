@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Domain.Models;
@@ -12,6 +11,7 @@ namespace WebApi.Persistence.Repositories {
 		public async Task Add(Episodio item)
 		{
 			await _context.Episodios.AddAsync(item);
+			_context.SaveChanges();
 		}
 
 		public Episodio Get(int id)
@@ -27,11 +27,13 @@ namespace WebApi.Persistence.Repositories {
 		public void Remove(Episodio item)
 		{
 			_context.Episodios.Remove(item);
+			_context.SaveChanges();
 		}
 
 		public void Update(Episodio item)
 		{
 			_context.Episodios.Update(item);
+			_context.SaveChanges();
 		}
 	}
 }

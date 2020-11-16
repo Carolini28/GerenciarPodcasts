@@ -36,7 +36,7 @@ namespace WebApi.Controllers {
 		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public async Task<IActionResult> Post(Episodio episodio)
+		public async Task<IActionResult> Post([FromBody] Episodio episodio)
 		{
 			if (!ModelState.IsValid)
 				return BadRequest("Not a valid model");
