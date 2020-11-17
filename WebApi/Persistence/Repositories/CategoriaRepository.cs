@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Domain.Models;
@@ -20,9 +21,9 @@ namespace WebApi.Persistence.Repositories {
 			return _context.Categorias.Find(id);
 		}
 
-		public IEnumerable<Categoria> GetAll()
+		public async Task<IEnumerable<Categoria>> GetAll()
 		{
-			return _context.Categorias.ToList();
+			return await _context.Categorias.AsNoTracking().ToListAsync();
 		}
 
 		public void Remove(Categoria item)

@@ -20,9 +20,9 @@ namespace WebApi.Controllers {
 
 		// GET: api/<EpisodiosController>
 		[HttpGet]
-		public IEnumerable<Episodio> Get()
+		public async Task<IEnumerable<Episodio>> Get()
 		{
-			return _episodioService.GetAll();
+			return await _episodioService.GetAll();
 		}
 
 		// GET api/<EpisodiosController>/5
@@ -70,9 +70,10 @@ namespace WebApi.Controllers {
 		}
 
 		[HttpGet("Categoria/{id}")]
-		public IEnumerable<Episodio> GetEpisodiosPorCategoria(int id)
+		public  IEnumerable<Episodio> GetEpisodiosPorCategoria(int id)
 		{
-			return _episodioService.GetAll().Where(x => x.CodigoCategoria == id);
+			var eps = _episodioService.GetAll().Result.Where(x => x.CodigoCategoria == id);
+			return   eps;
 		}
 	}
 }

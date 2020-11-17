@@ -1,4 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication.Models;
@@ -12,9 +17,34 @@ namespace WebApplication.Controllers {
 			_logger = logger;
 		}
 
-		public IActionResult Index()
+		public ActionResult Index()
 		{
-			return View();
+			ViewBag.Title = "ValtechPod";
+
+			IEnumerable<Episodio> episodios = null;
+
+			using (var cliente = new HttpClient())
+			{
+				cliente.BaseAddress = new Uri("https://localhost:44367/api/");
+
+				var responseTask =  cliente.GetAsync("episodios");
+				responseTask.Wait();
+				var result = responseTask.Result;
+
+				if (result.IsSuccessStatusCode)
+				{
+					var readTask = result.Content.ReadAsAsync<IList<Episodio>>();
+					readTask.Wait();
+					episodios = readTask.Result;
+				}
+				else
+				{
+					episodios = Enumerable.Empty<Episodio>();
+					ModelState.AddModelError(string.Empty, "Erro no servidor. Contate o Administrador.");
+				}
+			}
+
+			return View(episodios);
 		}
 
 		public IActionResult Privacy()

@@ -24,9 +24,9 @@ namespace WebApi.Services {
 			return _categoriaRepository.Get(id);
 		}
 
-		public IEnumerable<Categoria> GetAll()
+		public async Task<IEnumerable<Categoria>> GetAll()
 		{
-			return _categoriaRepository.GetAll();
+			return await _categoriaRepository.GetAll();
 		}
 
 		public void Remove(Categoria item)

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Domain.Models;
@@ -18,9 +19,9 @@ namespace WebApi.Controllers {
 
 		// GET: api/<CategoriasController>
 		[HttpGet]
-		public IEnumerable<Categoria> Get()
+		public async Task<IEnumerable<Categoria>> Get()
 		{
-			return _categoriaService.GetAll();
+			return await _categoriaService.GetAll();
 		}
 
 		// GET api/<CategoriasController>/5

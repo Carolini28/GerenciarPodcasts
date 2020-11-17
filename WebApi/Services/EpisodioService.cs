@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApi.Domain.Models;
+using WebApi.Domain.Models.Queries;
 using WebApi.Domain.Repositories;
 using WebApi.Domain.Services;
 
@@ -24,9 +25,9 @@ namespace WebApi.Services {
 			return _episodioRepository.Get(id);
 		}
 
-		public IEnumerable<Episodio> GetAll()
+		public async Task<IEnumerable<Episodio>> GetAll()
 		{
-			return  _episodioRepository.GetAll();
+			return await _episodioRepository.GetAll();
 		}
 
 		public void Remove(Episodio item)

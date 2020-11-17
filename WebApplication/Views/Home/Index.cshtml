@@ -1,6 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<WebApplication.Models.Episodio>
+
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -21,11 +20,10 @@
         <div class="projects-menu mb-30 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="text-center">
                 <ul class="nav justify-content-center">
-                    <li class="nav-item active"> <a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item active"> <a class="nav-link" href="#">ALL</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">DEVELOPMENT</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">DESIGN</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">PROJECT MANAGEMENT</a></li>
                 </ul>
             </div>
         </div>
@@ -214,10 +212,10 @@
     });
 
     $(function () {
-        $(".blogBox").slice(0, 3).show(); 
-        $("#load").click(function (e) { 
+        $(".blogBox").slice(0, 3).show();
+        $("#load").click(function (e) {
             e.preventDefault();
-            $(".blogBox:hidden").slice(0, 3).show(); 
+            $(".blogBox:hidden").slice(0, 3).show();
             if ($(".blogBox:hidden").length == 0) {
                 $("#load").hide();
                 //alert("No more divs");
@@ -373,16 +371,16 @@
         margin-right: 45px;
     }
 
-    .jp-play:after {
-        position: absolute;
-        display: block;
-        left: 3px;
-        top: -4px;
-        content: "E";
-        font-family: "ElegantIcons";
-        font-size: 30px;
-        color: #ffffff;
-    }
+        .jp-play:after {
+            position: absolute;
+            display: block;
+            left: 3px;
+            top: -4px;
+            content: "E";
+            font-family: "ElegantIcons";
+            font-size: 30px;
+            color: #ffffff;
+        }
 
     .player_controls_box img {
         width: 20%;

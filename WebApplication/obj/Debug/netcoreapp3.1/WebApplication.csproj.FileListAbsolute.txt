@@ -11,8 +11,6 @@ C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\bin\Debug\netcoreap
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\bin\Debug\netcoreapp3.1\WebApplication.Views.pdb
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.AssemblyInfoInputs.cache
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.AssemblyInfo.cs
-C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.csproj.CoreCompileInputs.cache
-C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.RazorAssemblyInfo.cache
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.RazorAssemblyInfo.cs
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.TagHelpers.input.cache
@@ -35,3 +33,8 @@ C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreap
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.genruntimeconfig.cache
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.csproj.CopyComplete
 C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.csprojAssemblyReference.cache
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\carol\Source\Repos\GerenciarPodcasts\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.MvcApplicationPartsAssemblyInfo.cache
